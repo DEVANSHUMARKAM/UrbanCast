@@ -1,0 +1,15 @@
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.7.4
+pydantic-settings==2.3.4
+shapely==2.0.5
+pyproj==3.6.1
+overpy==0.7
+geopy==2.4.1
+numpy==1.26.4
+python-dotenv==1.0.1
+requests==2.32.3
+pystac-client==0.7.7
+planetary-computer==1.0.0
+rioxarray==0.15.5
+xarray==2024.2.0

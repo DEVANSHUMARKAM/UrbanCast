@@ -1,0 +1,151 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── Green theme overrides ───────────────────────────── */
+:root {
+  --ug-green:       #16a34a;
+  --ug-green-dark:  #15803d;
+  --ug-green-deep:  #14532d;
+  --ug-green-light: #f0fdf4;
+  --ug-green-mid:   #dcfce7;
+  --ug-green-border:#bbf7d0;
+  --ug-green-muted: #4b7c5a;
+}
+
+.btn-primary, .bg-primary { background-color: var(--ug-green) !important; border-color: var(--ug-green) !important; }
+.btn-primary:hover         { background-color: var(--ug-green-dark) !important; border-color: var(--ug-green-dark) !important; }
+.btn-primary:disabled      { background-color: #86efac !important; border-color: #86efac !important; }
+.btn-outline-primary       { color: var(--ug-green) !important; border-color: var(--ug-green) !important; }
+.btn-outline-primary:hover { background-color: var(--ug-green) !important; color: #fff !important; }
+.text-primary              { color: var(--ug-green) !important; }
+.border-primary            { border-color: var(--ug-green) !important; }
+.badge.bg-primary          { background-color: var(--ug-green) !important; }
+.alert-primary             { background-color: var(--ug-green-mid) !important; border-color: var(--ug-green-border) !important; color: var(--ug-green-deep) !important; }
+.form-range::-webkit-slider-thumb { background: var(--ug-green); }
+.form-range::-moz-range-thumb     { background: var(--ug-green); }
+.spinner-border.text-primary      { color: var(--ug-green) !important; }
+
+/* ── Satellite hero background ───────────────────────── */
+.hero-bg {
+  background-image: url(/hero-satellite.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero-overlay {
+  background: linear-gradient(160deg,
+    rgba(5,46,22,0.88) 0%,
+    rgba(20,83,45,0.82) 50%,
+    rgba(5,46,22,0.92) 100%);
+}
+
+/* ── Animations ──────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.4); }
+  50%       { box-shadow: 0 0 0 8px rgba(22,163,74,0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.anim-fadeinup   { animation: fadeInUp 0.65s cubic-bezier(.22,1,.36,1) both; }
+.anim-delay-1    { animation-delay: 0.12s; }
+.anim-delay-2    { animation-delay: 0.24s; }
+.anim-delay-3    { animation-delay: 0.36s; }
+.anim-fadein     { animation: fadeIn 0.8s ease both; }
+.anim-slideinleft{ animation: slideInLeft 0.55s cubic-bezier(.22,1,.36,1) both; }
+
+/* ── Card hover effects ──────────────────────────────── */
+.ug-card {
+  transition: transform 0.25s cubic-bezier(.22,1,.36,1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease !important;
+  cursor: pointer;
+}
+.ug-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 24px 56px rgba(22,163,74,0.22) !important;
+  border-color: var(--ug-green) !important;
+}
+.ug-card-locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.ug-card-locked:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: rgba(255,255,255,0.15) !important;
+}
+
+/* ── Glassmorphism card ──────────────────────────────── */
+.glass-card {
+  background: rgba(255,255,255,0.08) !important;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(134,239,172,0.25) !important;
+  border-radius: 18px !important;
+}
+
+/* ── Navbar glass ────────────────────────────────────── */
+.navbar-glass {
+  background: rgba(5,46,22,0.6) !important;
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(134,239,172,0.18) !important;
+}
+
+/* ── Green sidebar ───────────────────────────────────── */
+.ug-sidebar {
+  background: var(--ug-green-light);
+  border-right: 1px solid var(--ug-green-border);
+}
+
+/* ── Sidebar label ───────────────────────────────────── */
+.ug-label {
+  color: var(--ug-green-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Result info cards ───────────────────────────────── */
+.ug-info-card {
+  background: var(--ug-green-mid);
+  border: 1px solid var(--ug-green-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+}
+
+/* ── Run button pulse ────────────────────────────────── */
+.btn-run {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+.btn-run:disabled { animation: none; }
+
+/* ── Tag pill ────────────────────────────────────────── */
+.ug-tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(134,239,172,0.22);
+  color: rgba(255,255,255,0.55);
+  transition: background 0.2s, color 0.2s;
+}
+.ug-card:hover .ug-tag {
+  background: rgba(22,163,74,0.15);
+  color: #86efac;
+}
