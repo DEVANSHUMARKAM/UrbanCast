@@ -16,3 +16,5 @@ services:
         value: 45
       - key: CORS_ORIGINS
         value: https://urbangrowth.vercel.app
+      - key: PYTHON_VERSION
+        value: 3.11.9
