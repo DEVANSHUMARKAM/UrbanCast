@@ -66,7 +66,7 @@ export default function HistoricalPredict() {
           onClick={() => navigate('/')}>
           ← Back
         </button>
-        <span className="navbar-brand mb-0 fw-bold">🌿 UrbanGrowth</span>
+        <span className="navbar-brand mb-0 fw-bold">UrbanGrowth</span>
         <span className="ms-1 small" style={{ color: '#86efac' }}>
           / Historical Prediction
         </span>

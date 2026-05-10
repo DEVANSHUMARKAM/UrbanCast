@@ -13,7 +13,7 @@ export default function Landing() {
         {/* ── Navbar ── */}
         <nav className="navbar navbar-dark navbar-glass sticky-top px-4 py-3 anim-fadein">
           <span className="navbar-brand fw-bold fs-5 mb-0">
-            🌿 UrbanGrowth
+            🏢 UrbanGrowth
           </span>
           <span className="badge rounded-pill border border-success text-success bg-transparent small">
             Geospatial Intelligence
