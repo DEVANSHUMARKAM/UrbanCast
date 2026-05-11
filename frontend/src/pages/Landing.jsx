@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import MethodologySection from '../components/MethodologySection'
 
 const MATH_TAGS = ['Gravity model', 'OSM roads', 'Haversine', 'Instant result']
 const HIST_TAGS = ['Landsat 8/9', 'NDBI / NDVI', 'Temporal trend', 'Planetary Computer']
@@ -105,6 +106,8 @@ export default function Landing() {
 
           </div>
         </section>
+
+        <MethodologySection />
 
         {/* ── Footer ── */}
         <footer className="mt-auto text-center py-3 small anim-fadein"
